@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+    tesla_cost_calculator:
+        container_name: tesla_cost_calculator
+        image: 'thinkfree84/tesla_cost_calculator:latest'
+        build:
+            context: ./
+            dockerfile: DockerFile
+        restart: always
+        environment:
+            - PC_DBUSER=teslamate
+            - PC_DBPASS=secret
+            - PC_DBSERVER=172.16.10.110
+            - PC_DBPORT=5432
+        ports:
+            - 0.0.0.0:8080:8080

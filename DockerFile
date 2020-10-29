@@ -1,0 +1,15 @@
+# First stage : Compiling
+
+FROM golang:alpine AS builder
+
+ADD . /pricecalculator
+WORKDIR /pricecalculator
+RUN go build .
+
+# Last stage : Creating final container
+FROM alpine
+
+WORKDIR /
+COPY --from=builder /pricecalculator/pricecalculator /pricecalculator
+EXPOSE 8080
+ENTRYPOINT /pricecalculator
