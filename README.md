@@ -17,3 +17,10 @@ For now it depends on an external counter to calculate the extra costs not inclu
 It's based on my electricity provider : I have 3 diferent prices during the day for the electricity and the price change each months ... Their is plans to make it configurable ...
 
 For now it suits my needs, if you want any changes for your needs feel free to open a ticket or, better make a pull request :)
+
+Client
+---------------------------
+
+![Image of the client](https://github.com/think-free/teslabiller/blob/master/images/client1.jpg)
+
+![Image of the client](https://github.com/think-free/teslabiller/blob/master/images/client2.jpg)
